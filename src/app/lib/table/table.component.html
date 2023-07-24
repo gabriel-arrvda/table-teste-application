@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <ng-container *ngFor="let h of headers">
+                <th>{{ h }}</th>
+            </ng-container>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let d of data">
+            <tr>
+                <ng-container *ngFor="let h of headers">
+                    <td>{{d[h]}}</td>
+                </ng-container>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+<p>table works!</p>
