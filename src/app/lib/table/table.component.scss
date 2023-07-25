@@ -1,0 +1,42 @@
+:host{
+
+    --font-bodyName: "Helvetica";
+    --font-bodyFamily: sans-serif;
+    --font-bodySize: 1em;
+    --font-bodyColor: #252525;
+    --font-bodyWeight: 400;
+    --font-bodyStyle: normal;
+    --font-headerName: "Helvetica";
+    --font-headerFamily: sans-serif;
+    --font-headerSize: 1.1em;
+    --font-headerColor: #000000;
+    --font-headerWeight: 600;
+    --font-headerStyle: normal;
+
+    td{
+        font-family: var(--font-bodyName), var(--font-bodyFamily);
+        font-size: var(--font-bodySize);
+        font-weight: var(--font-bodyWeight);
+        color: var(--font-bodyColor);
+        font-style: var(--font-bodyStyle);
+    }
+
+    th{
+        font-family: var(--font-headerName), var(--font-headerFamily);
+        font-size: var(--font-headerSize);
+        font-weight: var(--font-headerWeight);
+        color: var(--font-headerColor);
+        font-style: var(--font-headerStyle);
+    }
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.border{
+    &, td, th{
+        border: 2px solid rgb(214, 214, 214);
+    }
+}

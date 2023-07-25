@@ -1,19 +1,20 @@
-<table>
-    <thead>
-        <tr>
-            <ng-container *ngFor="let h of headers">
-                <th>{{ h }}</th>
-            </ng-container>
-        </tr>
-    </thead>
-    <tbody>
-        <ng-container *ngFor="let d of data">
+<ng-container *ngIf="dataBase?.table">
+    <table [ngClass]="{'border': dataBase.table.border}">
+        <thead>
             <tr>
-                <ng-container *ngFor="let h of headers">
-                    <td>{{d[h]}}</td>
+                <ng-container *ngFor="let h of dataBase.genericFields">
+                    <th>{{ h.label }}</th>
                 </ng-container>
             </tr>
-        </ng-container>
-    </tbody>
-</table>
-<p>table works!</p>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let d of dataBase.values | async">
+                <tr>
+                    <ng-container *ngFor="let h of dataBase.genericFields">
+                        <td>{{d[h.key]}}</td>
+                    </ng-container>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</ng-container>

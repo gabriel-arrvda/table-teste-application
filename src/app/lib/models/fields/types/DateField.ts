@@ -1,10 +1,10 @@
 import { GenericField } from "./GenericField";
 
-export class ChildField extends GenericField {
+export class DateField extends GenericField {
     constructor(
         label: string,
         key: string,
-        public path: [string],
+        public date: boolean,
         hide?: boolean,
     ) {
         super(label, key, hide);
