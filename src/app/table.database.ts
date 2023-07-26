@@ -1,9 +1,11 @@
 import { TableController } from "./lib/controllers/TableController";
 import { ITableController } from "./lib/interfaces/ITableController";
 import { ChildField, SimpleText, MaskedText, DateField, MoneyField } from "./lib/models/fields/fields";
+import { Table } from "./lib/models/table/table";
 
 export class TableDatabase extends TableController implements ITableController {
     override genericFields!: ChildField[] | SimpleText[] | MaskedText[] | DateField[] | MoneyField[];
+    override table!: Table;
 
     override load(): Promise<any[]> {
         const data = [
