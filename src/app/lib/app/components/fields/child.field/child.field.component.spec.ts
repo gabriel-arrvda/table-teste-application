@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
+import { ChildFieldComponent } from './child.field.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('ChildFieldComponent', () => {
+  let component: ChildFieldComponent;
+  let fixture: ComponentFixture<ChildFieldComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ HeaderComponent ]
+      imports: [ ChildFieldComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(ChildFieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

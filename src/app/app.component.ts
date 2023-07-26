@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TableDatabase } from './lib/table/table.database';
 import { ITableController } from './lib/interfaces/ITableController';
+import { TableDatabase } from './table.database';
 
 @Component({
   selector: 'app-root',

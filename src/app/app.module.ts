@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { TableComponent } from './lib/table/table.component';
+import { TableComponent } from './lib/app/table/table.component';
 
 @NgModule({
   declarations: [

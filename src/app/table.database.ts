@@ -1,6 +1,6 @@
-import { TableController } from "../controllers/TableController";
-import { ChildField, DateField, MaskedText, MoneyField, SimpleText } from "../models/fields/fields";
-import { ITableController } from "../interfaces/ITableController";
+import { TableController } from "./lib/controllers/TableController";
+import { ITableController } from "./lib/interfaces/ITableController";
+import { ChildField, SimpleText, MaskedText, DateField, MoneyField } from "./lib/models/fields/fields";
 
 export class TableDatabase extends TableController implements ITableController {
     override genericFields!: ChildField[] | SimpleText[] | MaskedText[] | DateField[] | MoneyField[];

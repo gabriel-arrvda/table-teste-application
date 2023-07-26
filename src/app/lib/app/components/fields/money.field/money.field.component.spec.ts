@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RowComponent } from './row.component';
+import { MoneyFieldComponent } from './money.field.component';
 
-describe('RowComponent', () => {
-  let component: RowComponent;
-  let fixture: ComponentFixture<RowComponent>;
+describe('MoneyFieldComponent', () => {
+  let component: MoneyFieldComponent;
+  let fixture: ComponentFixture<MoneyFieldComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ RowComponent ]
+      imports: [ MoneyFieldComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RowComponent);
+    fixture = TestBed.createComponent(MoneyFieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

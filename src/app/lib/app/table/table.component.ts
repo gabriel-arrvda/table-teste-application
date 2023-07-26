@@ -1,11 +1,12 @@
 import { Component, ElementRef, Input, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ITableController } from '../interfaces/ITableController';
+import { ITableController } from '../../interfaces/ITableController';
+import { FieldLoaderDirective } from '../components/directives/field.loader';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FieldLoaderDirective],
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
