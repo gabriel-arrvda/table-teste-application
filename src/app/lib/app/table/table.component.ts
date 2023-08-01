@@ -22,17 +22,27 @@ export class TableComponent implements OnChanges {
   }
 
   setTableProperties() {
-    if (this.dataBase.table.font?.bodyName) this.elRef.nativeElement.style.setProperty("--font-bodyName", this.dataBase.table.font.bodyName);
-    if (this.dataBase.table.font?.bodyFamily) this.elRef.nativeElement.style.setProperty("--font-bodyFamily", this.dataBase.table.font.bodyFamily);
-    if (this.dataBase.table.font?.bodySize) this.elRef.nativeElement.style.setProperty("--font-bodySize", this.dataBase.table.font.bodySize);
-    if (this.dataBase.table.font?.bodyColor) this.elRef.nativeElement.style.setProperty("--font-bodyColor", this.dataBase.table.font.bodyColor);
-    if (this.dataBase.table.font?.bodyStyle) this.elRef.nativeElement.style.setProperty("--font-bodyStyle", this.dataBase.table.font.bodyStyle);
-    if (this.dataBase.table.font?.bodyWeight) this.elRef.nativeElement.style.setProperty("--font-bodyWeight", this.dataBase.table.font.bodyWeight);
-    if (this.dataBase.table.font?.headerName) this.elRef.nativeElement.style.setProperty("--font-headerName", this.dataBase.table.font.headerName);
-    if (this.dataBase.table.font?.headerFamily) this.elRef.nativeElement.style.setProperty("--font-headerFamily", this.dataBase.table.font.headerFamily);
-    if (this.dataBase.table.font?.headerSize) this.elRef.nativeElement.style.setProperty("--font-headerSize", this.dataBase.table.font.headerSize);
-    if (this.dataBase.table.font?.headerColor) this.elRef.nativeElement.style.setProperty("--font-headerColor", this.dataBase.table.font.headerColor);
-    if (this.dataBase.table.font?.headerWeight) this.elRef.nativeElement.style.setProperty("--font-headerWeight", this.dataBase.table.font.headerWeight);
-    if (this.dataBase.table.font?.headerStyle) this.elRef.nativeElement.style.setProperty("--font-headerStyle", this.dataBase.table.font.headerStyle);
+    if (this.dataBase.table.cell?.bodyName) this.elRef.nativeElement.style.setProperty("--cell-bodyName", this.dataBase.table.cell.bodyName);
+    if (this.dataBase.table.cell?.bodyFamily) this.elRef.nativeElement.style.setProperty("--cell-bodyFamily", this.dataBase.table.cell.bodyFamily);
+    if (this.dataBase.table.cell?.bodySize) this.elRef.nativeElement.style.setProperty("--cell-bodySize", this.dataBase.table.cell.bodySize);
+    if (this.dataBase.table.cell?.bodyColor) this.elRef.nativeElement.style.setProperty("--cell-bodyColor", this.dataBase.table.cell.bodyColor);
+    if (this.dataBase.table.cell?.bodyBg) this.elRef.nativeElement.style.setProperty("--cell-bodyBg", this.dataBase.table.cell.bodyBg);
+    if (this.dataBase.table.cell?.bodyStyle) this.elRef.nativeElement.style.setProperty("--cell-bodyStyle", this.dataBase.table.cell.bodyStyle);
+    if (this.dataBase.table.cell?.bodyWeight) this.elRef.nativeElement.style.setProperty("--cell-bodyWeight", this.dataBase.table.cell.bodyWeight);
+    if (this.dataBase.table.cell?.headerName) this.elRef.nativeElement.style.setProperty("--cell-headerName", this.dataBase.table.cell.headerName);
+    if (this.dataBase.table.cell?.headerFamily) this.elRef.nativeElement.style.setProperty("--cell-headerFamily", this.dataBase.table.cell.headerFamily);
+    if (this.dataBase.table.cell?.headerSize) this.elRef.nativeElement.style.setProperty("--cell-headerSize", this.dataBase.table.cell.headerSize);
+    if (this.dataBase.table.cell?.headerColor) this.elRef.nativeElement.style.setProperty("--cell-headerColor", this.dataBase.table.cell.headerColor);
+    if (this.dataBase.table.cell?.headerBg) this.elRef.nativeElement.style.setProperty("--cell-headerBg", this.dataBase.table.cell.headerBg);
+    if (this.dataBase.table.cell?.headerWeight) this.elRef.nativeElement.style.setProperty("--cell-headerWeight", this.dataBase.table.cell.headerWeight);
+    if (this.dataBase.table.cell?.headerStyle) this.elRef.nativeElement.style.setProperty("--cell-headerStyle", this.dataBase.table.cell.headerStyle);
+    if (this.dataBase.table.bodyPadding?.left) this.elRef.nativeElement.style.setProperty("--bodyPadding-left", this.dataBase.table.bodyPadding?.left);
+    if (this.dataBase.table.bodyPadding?.top) this.elRef.nativeElement.style.setProperty("--bodyPadding-top", this.dataBase.table.bodyPadding?.top);
+    if (this.dataBase.table.bodyPadding?.right) this.elRef.nativeElement.style.setProperty("--bodyPadding-right", this.dataBase.table.bodyPadding?.right);
+    if (this.dataBase.table.bodyPadding?.bottom) this.elRef.nativeElement.style.setProperty("--bodyPadding-bottom", this.dataBase.table.bodyPadding?.bottom);
+    if (this.dataBase.table.headerPadding?.left) this.elRef.nativeElement.style.setProperty("--headerPadding-left", this.dataBase.table.headerPadding?.left);
+    if (this.dataBase.table.headerPadding?.top) this.elRef.nativeElement.style.setProperty("--headerPadding-top", this.dataBase.table.headerPadding?.top);
+    if (this.dataBase.table.headerPadding?.right) this.elRef.nativeElement.style.setProperty("--headerPadding-right", this.dataBase.table.headerPadding?.right);
+    if (this.dataBase.table.headerPadding?.bottom) this.elRef.nativeElement.style.setProperty("--headerPadding-bottom", this.dataBase.table.headerPadding?.bottom);
   }
 }

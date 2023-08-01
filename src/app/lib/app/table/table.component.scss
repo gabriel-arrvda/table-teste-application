@@ -1,32 +1,47 @@
 :host{
 
-    --font-bodyName: "Helvetica";
-    --font-bodyFamily: sans-serif;
-    --font-bodySize: 1em;
-    --font-bodyColor: #252525;
-    --font-bodyWeight: 400;
-    --font-bodyStyle: normal;
-    --font-headerName: "Helvetica";
-    --font-headerFamily: sans-serif;
-    --font-headerSize: 1.1em;
-    --font-headerColor: #000000;
-    --font-headerWeight: 600;
-    --font-headerStyle: normal;
+    --cell-bodyName: "Helvetica";
+    --cell-bodyFamily: sans-serif;
+    --cell-bodySize: 1em;
+    --cell-bodyColor: #252525;
+    --cell-bodyBg: #fff;
+    --cell-bodyWeight: 400;
+    --cell-bodyStyle: normal;
+    --cell-headerName: "Helvetica";
+    --cell-headerFamily: sans-serif;
+    --cell-headerSize: 1.1em;
+    --cell-headerColor: #000000;
+    --cell-headerBg: #f1f1f1;
+    --cell-headerWeight: 600;
+    --cell-headerStyle: normal;
+
+    --bodyPadding-left: 0.8em;
+    --bodyPadding-right: 0.8em;
+    --bodyPadding-top: 0.6em;
+    --bodyPadding-bottom: 0.6em;
+    --headerPadding-left: 0.8em;
+    --headerPadding-right: 0.8em;
+    --headerPadding-top: 0.6em;
+    --headerPadding-bottom: 0.6em;
 
     td{
-        font-family: var(--font-bodyName), var(--font-bodyFamily);
-        font-size: var(--font-bodySize);
-        font-weight: var(--font-bodyWeight);
-        color: var(--font-bodyColor);
-        font-style: var(--font-bodyStyle);
+        font-family: var(--cell-bodyName), var(--cell-bodyFamily);
+        font-size: var(--cell-bodySize);
+        font-weight: var(--cell-bodyWeight);
+        color: var(--cell-bodyColor);
+        font-style: var(--cell-bodyStyle);
+        background-color: var(--cell-bodyBg);
+        padding: var(--bodyPadding-top) var(--bodyPadding-right) var(--bodyPadding-bottom) var(--bodyPadding-left);
     }
 
     th{
-        font-family: var(--font-headerName), var(--font-headerFamily);
-        font-size: var(--font-headerSize);
-        font-weight: var(--font-headerWeight);
-        color: var(--font-headerColor);
-        font-style: var(--font-headerStyle);
+        font-family: var(--cell-headerName), var(--cell-headerFamily);
+        font-size: var(--cell-headerSize);
+        font-weight: var(--cell-headerWeight);
+        color: var(--cell-headerColor);
+        font-style: var(--cell-headerStyle);
+        background-color: var(--cell-headerBg);
+        padding: var(--headerPadding-top) var(--headerPadding-right) var(--headerPadding-bottom) var(--headerPadding-left);
     }
 }
 

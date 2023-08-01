@@ -12,4 +12,9 @@ import { DateField } from 'src/app/lib/models/fields/fields';
 export class DateFieldComponent {
   field!: DateField;
   data!: any;
+
+  get dateUnix() {
+    const date = new Date(this.data[this.field.key] * 1000);
+    return date;
+  }
 }

@@ -4,9 +4,12 @@ export class DateField extends GenericField {
     constructor(
         label: string,
         key: string,
-        public date: boolean,
+        public dateType: 'unix' | 'timestamp',
+        public format: string,
+        verticalAlign: "top" | "middle" | "bottom",
+        horizontalAlign: "left" | "center" | "right",
         hide?: boolean,
     ) {
-        super(label, key, hide);
+        super(label, key, verticalAlign, horizontalAlign, hide);
     }
 }

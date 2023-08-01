@@ -11,7 +11,7 @@
             <ng-container *ngFor="let d of dataBase.values | async">
                 <tr>
                     <ng-container *ngFor="let h of dataBase.genericFields">
-                        <td>
+                        <td style="text-align: {{h.horizontalAlign}}; vertical-align: {{h.verticalAlign}};">
                             <ng-container [appGenusField]="{field: h, data: d}"></ng-container>
                         </td>
                     </ng-container>

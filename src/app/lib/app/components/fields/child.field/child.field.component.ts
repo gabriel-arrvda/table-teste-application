@@ -12,4 +12,14 @@ import { ChildField } from 'src/app/lib/models/fields/fields';
 export class ChildFieldComponent {
   field!: ChildField;
   data!: any;
+
+  get value(): string {
+    let value = this.data[this.field.key];
+
+    for (const child of this.field.path) {
+      value = value[child];
+    }
+
+    return value;
+  }
 }

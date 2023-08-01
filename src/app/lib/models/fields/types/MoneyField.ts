@@ -4,10 +4,11 @@ export class MoneyField extends GenericField {
     constructor(
         label: string,
         key: string,
-        public money: boolean,
         public locale: string,
+        verticalAlign: "top" | "middle" | "bottom",
+        horizontalAlign: "left" | "center" | "right",
         hide?: boolean,
     ) {
-        super(label, key, hide);
+        super(label, key, verticalAlign, horizontalAlign, hide);
     }
 }
