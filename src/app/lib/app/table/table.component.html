@@ -1,22 +1,30 @@
-<ng-container *ngIf="dataBase?.table">
+@if (dataBase?.table) {
+
     <table [ngClass]="{'border': dataBase.table.border}">
         <thead>
             <tr>
-                <ng-container *ngFor="let h of dataBase.genericFields">
+                @for (h of dataBase.genericFields; track h) {
+
                     <th>{{ h.label }}</th>
-                </ng-container>
+                
+}
             </tr>
         </thead>
         <tbody>
-            <ng-container *ngFor="let d of dataBase.values | async">
+            @for (d of dataBase.values | async; track d) {
+
                 <tr>
-                    <ng-container *ngFor="let h of dataBase.genericFields">
+                    @for (h of dataBase.genericFields; track h) {
+
                         <td style="text-align: {{h.horizontalAlign}}; vertical-align: {{h.verticalAlign}};">
                             <ng-container [appGenusField]="{field: h, data: d}"></ng-container>
                         </td>
-                    </ng-container>
+                    
+}
                 </tr>
-            </ng-container>
+            
+}
         </tbody>
     </table>
-</ng-container>
+
+}

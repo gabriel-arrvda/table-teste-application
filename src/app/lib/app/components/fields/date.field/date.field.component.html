@@ -1,7 +1,9 @@
-<ng-container *ngIf="field.dateType === 'timestamp'">
-    {{ data[field.key] | date: field.format}}
-</ng-container>
+@if (field.dateType === 'timestamp') {
 
-<ng-container *ngIf="field.dateType === 'unix'">
-    {{ dateUnix | date: field.format}}
-</ng-container>
+{{ data[field.key] | date: field.format}}
+
+}
+
+@if (field.dateType === 'unix') {
+{{ dateUnix | date: field.format}}
+}
