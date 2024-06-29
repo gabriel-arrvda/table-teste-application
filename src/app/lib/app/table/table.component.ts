@@ -23,8 +23,10 @@ export class TableComponent implements OnChanges {
   }
 
   setTableProperties() {
-    if (this.dataBase.table.striped && this.dataBase.table.cell?.bodyBg) {
-      let color: string | number[] = hexToRgb(this.dataBase.table.cell.bodyBg);
+    if (this.dataBase.table.striped) {
+      let color: string | number[];
+      if (this.dataBase.table.cell?.bodyBg) color = hexToRgb(this.dataBase.table.cell.bodyBg);
+      else color = "rgb(255, 255, 255)";
       color = rgbToHsl(color);
       this.elRef.nativeElement.style.setProperty("--cell-stripedBg", `hsl(${color[0]}, ${color[1]}%, ${color[2] * 0.97}%)`);
     }
