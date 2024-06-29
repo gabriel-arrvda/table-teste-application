@@ -1,5 +1,4 @@
 :host{
-
     --cell-bodyName: "Helvetica";
     --cell-bodyFamily: sans-serif;
     --cell-bodySize: 1em;
@@ -11,9 +10,10 @@
     --cell-headerFamily: sans-serif;
     --cell-headerSize: 1.1em;
     --cell-headerColor: #000000;
-    --cell-headerBg: #f1f1f1;
+    --cell-headerBg: #ececec;
     --cell-headerWeight: 600;
     --cell-headerStyle: normal;
+    --cell-stripedBg: #f8f8f8;
 
     --bodyPadding-left: 0.8em;
     --bodyPadding-right: 0.8em;
@@ -24,13 +24,20 @@
     --headerPadding-top: 0.6em;
     --headerPadding-bottom: 0.6em;
 
+    tr:nth-child(even){
+        background-color: var(--cell-bodyBg);
+    }
+
+    tr:nth-child(odd){
+        background-color: var(--cell-stripedBg);
+    }
+
     td{
         font-family: var(--cell-bodyName), var(--cell-bodyFamily);
         font-size: var(--cell-bodySize);
         font-weight: var(--cell-bodyWeight);
         color: var(--cell-bodyColor);
         font-style: var(--cell-bodyStyle);
-        background-color: var(--cell-bodyBg);
         padding: var(--bodyPadding-top) var(--bodyPadding-right) var(--bodyPadding-bottom) var(--bodyPadding-left);
     }
 

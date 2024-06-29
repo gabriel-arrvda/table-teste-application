@@ -2,6 +2,7 @@ import { Component, ElementRef, Input, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ITableController } from '../../interfaces/ITableController';
 import { FieldLoaderDirective } from '../components/directives/field.loader';
+import { hexToRgb, rgbToHsl } from '../utils/colors';
 
 @Component({
   selector: 'app-table',
@@ -22,6 +23,12 @@ export class TableComponent implements OnChanges {
   }
 
   setTableProperties() {
+    if (this.dataBase.table.striped && this.dataBase.table.cell?.bodyBg) {
+      let color: string | number[] = hexToRgb(this.dataBase.table.cell.bodyBg);
+      color = rgbToHsl(color);
+      this.elRef.nativeElement.style.setProperty("--cell-stripedBg", `hsl(${color[0]}, ${color[1]}%, ${color[2] * 0.97}%)`);
+    }
+
     if (this.dataBase.table.cell?.bodyName) this.elRef.nativeElement.style.setProperty("--cell-bodyName", this.dataBase.table.cell.bodyName);
     if (this.dataBase.table.cell?.bodyFamily) this.elRef.nativeElement.style.setProperty("--cell-bodyFamily", this.dataBase.table.cell.bodyFamily);
     if (this.dataBase.table.cell?.bodySize) this.elRef.nativeElement.style.setProperty("--cell-bodySize", this.dataBase.table.cell.bodySize);

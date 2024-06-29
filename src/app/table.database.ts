@@ -33,6 +33,7 @@ export class TableDatabase extends TableController implements ITableController {
             cell: {
                 bodyName: "Roboto",
                 headerName: "Roboto",
+                bodyBg: "#fff",
             }
         };
     }
