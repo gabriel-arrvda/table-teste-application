@@ -1,9 +1,9 @@
-@if (dataBase && dataBase.table) {
+@if (dataBase() && dataBase()?.table) {
 
-<table [ngClass]="{'border': dataBase.table.border}">
+<table [ngClass]="{'border': dataBase()?.table?.border}">
     <thead>
         <tr>
-            @for (h of dataBase.genericFields; track h) {
+            @for (h of dataBase()?.genericFields; track h) {
 
             <th>{{ h.label }}</th>
 
@@ -11,10 +11,10 @@
         </tr>
     </thead>
     <tbody>
-        @for (d of dataBase.values | async; track d) {
+        @for (d of dataBase()?.values | async; track d) {
 
         <tr>
-            @for (h of dataBase.genericFields; track h) {
+            @for (h of dataBase()?.genericFields; track h) {
 
             <td style="text-align: {{h.horizontalAlign}}; vertical-align: {{h.verticalAlign}};">
                 <ng-container [appGenusField]="{field: h, data: d}"></ng-container>

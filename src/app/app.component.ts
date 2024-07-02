@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ITableController } from './lib/interfaces/ITableController';
 import { TableDatabase } from './table.database';
 
@@ -7,14 +7,26 @@ import { TableDatabase } from './table.database';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'table-teste-application';
 
-  dataBase!: ITableController;
+  private readonly dataBase: ITableController = new TableDatabase();
+  dataBaseSignal = signal<ITableController | null>(null);
 
-  async ngOnInit() {
-    const dataBase = new TableDatabase();
-    await dataBase.init();
-    this.dataBase = dataBase;
+  constructor() {
+    this.init();
+  }
+
+  async init() {
+    console.log("🚀 ~ AppComponent ~ init ~ this.dataBaseSignal():", this.dataBaseSignal());
+    await this.dataBase.init();
+    this.dataBaseSignal.set(this.dataBase);
+    console.log("🚀 ~ AppComponent ~ init ~ this.dataBaseSignal():", this.dataBaseSignal());
+  }
+
+  checkboxChanged(event: any) {
+    const checkbox = event.target;
+    console.log(checkbox.checked);
+    this.dataBase.table.border = checkbox.checked;
   }
 }
